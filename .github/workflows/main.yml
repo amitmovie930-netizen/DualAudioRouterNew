@@ -21,8 +21,7 @@ jobs:
           if [ -n "$ZIP" ]; then
             echo "Extracting $ZIP ..."
             unzip -o "$ZIP"
-            # Flatten if extracted into a subfolder
-            for d in DualAudioRouter DualAudioRouter_clean DualAudioRouter_fixed DualAudioRouter_final DualAudioRouter_v2; do
+            for d in DualAudioRouter DualAudioRouter_clean DualAudioRouter_fixed DualAudioRouter_final DualAudioRouter_v2 DualAudioRouter_v3; do
               if [ -d "$d" ]; then
                 cp -a "$d"/. .
                 rm -rf "$d"
